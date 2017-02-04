@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  daterelease: 2017-01-28
+  category: 1
+
+two:
+  text: MyString
+  daterelease: 2017-01-28
+  category: 1
