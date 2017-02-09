@@ -4,15 +4,16 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @posts = Post.order('created_at DESC').limit(4).offset(1)
   end
-
+=begin
   # GET /posts/new
   def new
     @post = Post.new
@@ -62,7 +63,7 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+=end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

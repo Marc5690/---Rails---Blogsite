@@ -1,24 +1,46 @@
-<p id="notice"><%= notice %></p>
+<!-- Page Content -->
+<div class="container post-container">
 
-<p>
-  <strong>Attr:</strong>
-  <%= @post.attributes %>
-</p>
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><%= @post.title %>
+                <small>Item Subheading</small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
 
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
+    <!-- Portfolio Item Row -->
+    <div class="row">
 
-<p>
-  <strong>Daterelease:</strong>
-  <%= @post.daterelease %>
-</p>
+        <div class="col-md-8">
+            <%= image_tag @post.image, class: 'img-responsive' %>
+        </div>
 
-<p>
-  <strong>Category:</strong>
-  <%= @post.category %>
-</p>
+        <div class="col-md-4">
+            <h3>Project Description</h3>
+            <p><%= @post.body %></p>
+        </div>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+    </div>
+    <!-- /.row -->
+
+    <!-- Related Projects Row -->
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h3 class="page-header">Related Projects</h3>
+        </div>
+
+        <% @posts.each do |post| %>
+            <div class="col-sm-3 col-xs-6">
+                <%= link_to post_path(post) do %>
+                  <%= image_tag post.image, class: 'img-responsive portfolio-item' %>
+                <% end %>
+            </div>
+        <% end %>
+
+    </div>
+    <!-- /.row -->
+</div>
