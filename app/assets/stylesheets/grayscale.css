@@ -75,7 +75,7 @@ a:focus {
   outline: none;
 }
 .navbar-custom a {
-  color: white;
+  color: silver;
 }
 .navbar-custom .nav li a {
   -webkit-transition: background 0.3s ease-in-out;
@@ -83,7 +83,7 @@ a:focus {
   transition: background 0.3s ease-in-out;
 }
 .navbar-custom .nav li a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: grey;
   outline: none;
   background-color: transparent;
 }
@@ -295,12 +295,12 @@ footer p {
 }
 ::-moz-selection {
   text-shadow: none;
-  background: #fcfcfc;
+  background: white;
   background: rgba(255, 255, 255, 0.2);
 }
 ::selection {
   text-shadow: none;
-  background: #fcfcfc;
+  background: white;
   background: rgba(255, 255, 255, 0.2);
 }
 img::selection {

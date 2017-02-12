@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
+=end
 
   # POST /posts
   # POST /posts.json
@@ -39,7 +40,7 @@ class PostsController < ApplicationController
       end
     end
   end
-
+=begin
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
@@ -73,8 +74,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      print(:post)
-      params.require(:post).permit!#(:text, :daterelease, :category)
+      params.require(:post).permit(:title, :text, :daterelease, :category)
       #params.fetch(:post, {})
     end 
 end

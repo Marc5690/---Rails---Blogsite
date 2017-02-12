@@ -3,23 +3,29 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <%= image_tag "profile.png", class: "img-responsive" %>
-                <div class="intro-text">
-                    <span class="name">Start Bootstrap</span>
-                    <hr class="star-light">
-                    <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+              <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                  <%= image_tag "profile.jpg", class: "img-responsive", class:"img-circle" %>
                 </div>
+                <div class="col-lg-4">
+                  <div class="intro-text">
+                  
+                    <span class="skills"><p>Hi, I'm Marc and I develop software.</p>I create solutions to software problems as my profession and enjoy developing apps as a hobby. 
+                    I also enjoy weightlifting, going to the cinema and spend far too much time on the internet. This website was created as a place to track my work and served as an exercise in creativity. Feedback and ideas are encouraged and welcome. You can find my CV by <a href="MarcLaffan-CurriculumVitae.pdf">clicking here</a>.</span>
+                  
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </div>
 </header>
 
 <!-- Portfolio Grid Section -->
-<section id="portfolio">
-    <div class="container">
+<section id="blog" class="container content-section">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Portfolio</h2>
+            <div class="col-lg-12">
+                <h2>Blog</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -28,47 +34,94 @@
                 <div class="col-sm-4 portfolio-item">
                 <%= link_to post_path(post) do %>
                   <%#= image_tag post.image, class: 'img-responsive' %>
-                  yyyyyyyyyyyy
-                  <%#= post.title %>
+                  <%= post.Title %>
                 <% end %>
                 </div>
             <% end %>
         </div>
-    </div>
 </section>
 
+<!-- Education Section -->
+<section class="container content-section" id="education">
+  <h2>Education</h2>
+      <ul>
+        
+        <li>Waterford Institute of Technology: Software Systems development(Ord)
+        <ul style="list-style-type:circle">
+          <li>From 2009 to 2012 I attended the Waterford Institute of Technology course "Software Systems Development". For this ordinary degree, I received a 2.1 score.</li></ul></li>
+        </br>
+        <li>Waterford Institute of Technology: Software Systems development(Hon)
+        <ul style="list-style-type:circle">
+          <li>From 2012 to 2013 I attended the Waterford Institute of Technology course "Software Systems Development". For this honours degree, I received a 2.1 score.</li></ul></li>
+        </br>
+        <li>University College Dublin: MSc in Computer Science(Negotiated Learning)
+        <ul style="list-style-type:circle">
+          <li>From 2015 to 2016 I attended the University College Dublin course "MSc in Computer Science (Negotiated Learning)". For this masters degree, I received a 1.1 score. The title "Negotiated Learning" refers to how this degree allows students to pick from roughly 100 modules related to computer science, a list of which can be found <a href="https://www.cs.ucd.ie/NLModules/">here</a>. My thesis project consisted of team project where I was responsible for the creation of a recommender system for a twitter application. I received an A- for this work.</li></ul></li>
+      </ul>
+</section>
+
+<!-- Experience Section -->
+<section class="container content-section" id="experience">
+  <h2>Experience</h2>
+      <ul>
+        
+        <li>Intern at Sonru(2011)
+        <ul style="list-style-type:circle">
+          <li>Primary responsibilities included testing of interview software, Ruby on Rails development and office administration.</li></ul></li>
+        </br>
+
+        <li>Software Engineer at Errigal (2014-2015)
+        <ul style="list-style-type:circle">
+          <li>Key member of development team working in a variety of roles, including SCRUM sprint development for Groovy on Grails applications, MySQL report generation for IDMS application, customer support, deployment of applications in Linux environments, travelling abroad for training purposes, ATP testing of software and problem solving and analysis of IDMS issues.</li></ul></li>
+        </br>
+        
+        <li>Guidewire (2016 to present)
+        <ul style="list-style-type:circle">
+          <li>GSC Consultant 1 at Guidewire Software. Position includes Java/Gosu-based Agile development and integration for Guidewire insurance products and manual testing of features.</li></ul></li>
+      </ul>
+</section>
+
+
 <!-- About Section -->
-<section class="success" id="about">
-    <div class="container">
+<section class="container content-section" id="about">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12">
                 <h2>About</h2>
                 <hr class="star-light">
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2">
-                <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+            <div class="col-lg-4">
+                I've worked with many programming languages over the course of almost a decade now. My go-to language of choice is Java, which I am continuously working on my skills in. When developing web applications, I tend to rely on my skills in Ruby on Rails, another language/framework that I am fond of for its simplicity. In fact, this website was created with Rails 5. I also work a lot with Android in my spare time, largely because I enjoy being the end-user reach that the Android platform provides. I have worked with Groovy on Grails, PHP, JavaScript, Gosu, Python, Bottle and a myriad of technologies that are too numerous to mention. Like Selenium. Or Bootstrap.
             </div>
             <div class="col-lg-4">
-                <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                On the non-technical side of things, I enjoy keeping fit and listening to podcasts. I play videogames (Currently Street Fighter 5. I am a master Zangief player and rightfully feared in the office) and absolutely adore any kind of zombie-related media. Videogames, TV shows, books, assorted junk, it does not matter! If it includes zombies I'm all over it like peanut on butter. I also collect, assemble and paint Warhammer models when the mood takes me. Don't act surprised, you know the programmer demograph...
             </div>
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="#" class="btn btn-lg btn-outline">
-                    <i class="fa fa-download"></i> Download Theme
-                </a>
+               <div class="col-lg-4">
+                Other than that, I haven't much left to say about myself. If you'd like to get in contact, my email can be found below by clicking on "contact me" (marclaffan@gmail.com). My github can also be found below, as can my LinkedIn profile and Play Store account. I currently have an ongoing project on the Play Store (You've guessed it - Zombies) that I'll be adding more to once this website goes live. I'm using it as a long-term project to both test out new features of the Android platform and (hopefully) a way of making a little bit of pocket money. If you have any feedback for it, please leave me a review. I'd appreciate it :)
             </div>
         </div>
-    </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
+<section id="contact" class="container content-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2><%= mail_to "marclaffan@gmail.com", "Contact Me", subject: "Hi! Please include your name and email address" %></h2><br>
-                <hr class="star-primary">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                  <h2><%= mail_to "marclaffan@gmail.com", "Contact Me", subject: "Howdy Marc! I'm your biggest fan!" %></h2><br>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                  <h2><a href="https://github.com/Marc5690">Github</a></h2><br>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                  <h2><a href="https://www.linkedin.com/in/marc-laffan-4134783a">LinkedIn</a></h2><br>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                  <h2><a href="https://play.google.com/store/apps/developer?id=Marc+Laffan">Play Store</a></h2><br>
+                </div>
+              </div>
             </div>
         </div>
 </section>

@@ -13,5 +13,7 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
+permit_params :Title, :text, :daterelease, :category
+
 
 end

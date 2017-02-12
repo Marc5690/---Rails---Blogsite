@@ -4,8 +4,8 @@
     <!-- Portfolio Item Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><%= @post.title %>
-                <small>Item Subheading</small>
+            <h1 class="page-header">
+              <small><%= @post.Title %></small>
             </h1>
         </div>
     </div>
@@ -13,14 +13,12 @@
 
     <!-- Portfolio Item Row -->
     <div class="row">
-
-        <div class="col-md-8">
-            <%= image_tag @post.image, class: 'img-responsive' %>
+        <div class="col-md-4">
+            <%#= image_tag @post.image, class: 'img-responsive' %>
         </div>
 
-        <div class="col-md-4">
-            <h3>Project Description</h3>
-            <p><%= @post.body %></p>
+        <div class="col-md-8">
+          <%= @post.text %>
         </div>
 
     </div>
@@ -30,13 +28,14 @@
     <div class="row">
 
         <div class="col-lg-12">
-            <h3 class="page-header">Related Projects</h3>
+            <h3 class="page-header">Other Posts</h3>
         </div>
 
         <% @posts.each do |post| %>
             <div class="col-sm-3 col-xs-6">
                 <%= link_to post_path(post) do %>
-                  <%= image_tag post.image, class: 'img-responsive portfolio-item' %>
+                  <%#= image_tag post.image, class: 'img-responsive portfolio-item' %>
+                  <%= post.Title%>
                 <% end %>
             </div>
         <% end %>
