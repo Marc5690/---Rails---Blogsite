@@ -52,6 +52,10 @@ a:focus {
 .light {
   font-weight: 400;
 }
+.centertext {
+  font-weight: 400;
+  text-align: center;
+}
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);

@@ -10,8 +10,10 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+
     @post = Post.find(params[:id])
     @posts = Post.order('created_at DESC').limit(4).offset(1)
+    render :layout => false
   end
 =begin
   # GET /posts/new
