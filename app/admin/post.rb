@@ -15,5 +15,15 @@ ActiveAdmin.register Post do
 
 permit_params :Title, :text, :daterelease, :category
 
+form do |f|
+  f.inputs do
+    f.input :Title
+    f.input :daterelease
+    f.input :category
+    f.input :text, :as => :ckeditor
+  end
+  f.actions
+end
+
 
 end

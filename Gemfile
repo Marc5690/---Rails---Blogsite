@@ -9,7 +9,7 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'pg'
 #gem 'sqlite3'
-gem 'rails_12factor', '0.0.2'
+
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -22,7 +22,8 @@ gem 'devise', '~> 4.2'
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
 gem 'active_skin'
-
+gem 'paperclip'
+gem 'ckeditor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
