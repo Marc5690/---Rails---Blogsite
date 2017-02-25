@@ -34,7 +34,7 @@
                 <div class="col-sm-4 portfolio-item mobiletext">
                 <%= link_to post_path(post) do %>
                   <%#= image_tag post.image, class: 'img-responsive' %>
-                  <%= post.Title %>
+                  <%= post.Title + " " + post.daterelease.to_s%>
                 <% end %>
                 </div>
             <% end %>
