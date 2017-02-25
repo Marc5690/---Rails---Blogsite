@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.where('daterelease < ?', Date.today).order('created_at DESC')
+    #@posts = Post.all.order('created_at DESC')
   end
 
   # GET /posts/1
@@ -12,8 +13,13 @@ class PostsController < ApplicationController
   def show
 
     @post = Post.find(params[:id])
-    @posts = Post.order('created_at DESC').limit(4).offset(1)
-    render :layout => false
+    if @post.daterelease <= Date.today
+      @posts = Post.where('daterelease < ?', Date.today).order('created_at DESC').limit(4).offset(1)
+      render :layout => false
+    else
+      @posts = []
+      redirect_to action: "index"
+    end
   end
 =begin
   # GET /posts/new
