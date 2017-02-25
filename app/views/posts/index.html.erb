@@ -8,7 +8,7 @@
                   <%= image_tag "profile.jpg", class: "img-responsive", class:"img-circle" %>
                 </div>
                 <div class="col-lg-4">
-                  <div class="intro-text">
+                  <div class="intro-text mobiletext">
                   
                     <span class="skills"><p>Hi, I'm Marc and I develop software.</p>I create solutions to software problems as my profession and enjoy developing apps as a hobby. 
                     I also enjoy weightlifting, going to the cinema and spend far too much time on the internet. This website was created as a place to track my work and served as an exercise in creativity. Feedback and ideas are encouraged and welcome. You can find my CV by <a href="MarcLaffan-CurriculumVitae.pdf">clicking here</a>.</span>
@@ -31,7 +31,7 @@
         </div>
         <div class="row">
                 <% @posts.each do |post| %>
-                <div class="col-sm-4 portfolio-item">
+                <div class="col-sm-4 portfolio-item mobiletext">
                 <%= link_to post_path(post) do %>
                   <%#= image_tag post.image, class: 'img-responsive' %>
                   <%= post.Title %>
@@ -44,18 +44,19 @@
 <!-- Education Section -->
 <section class="container content-section" id="education">
   <h2>Education</h2>
+  <hr class="star-primary">
       <ul>
         
         <li>Waterford Institute of Technology: Software Systems development(Ord) <b>2.1</b>
-        <ul style="list-style-type:circle">
+        <ul style="list-style-type:circle" class="mobiletext">
           <li>From 2009 to 2012 I attended the Waterford Institute of Technology course "Software Systems Development".</li></ul></li>
         </br>
         <li>Waterford Institute of Technology: Software Systems development(Hons) <b>2.1</b>
-        <ul style="list-style-type:circle">
+        <ul style="list-style-type:circle" class="mobiletext">
           <li>From 2012 to 2013 I attended the Waterford Institute of Technology course "Software Systems Development".</li></ul></li>
         </br>
         <li>University College Dublin: MSc in Computer Science(Negotiated Learning) <b>1.1</b>
-        <ul style="list-style-type:circle">
+        <ul style="list-style-type:circle" class="mobiletext">
           <li>From 2015 to 2016 I attended the University College Dublin course "MSc in Computer Science (Negotiated Learning)". The title "Negotiated Learning" refers to how this degree allows students to pick from roughly 100 modules related to computer science, a list of which can be found <a href="https://www.cs.ucd.ie/NLModules/">here</a>. My thesis project consisted of team project where I was responsible for the creation of a recommender system for a twitter application. I received an A- for this work.</li></ul></li>
       </ul>
 </section>
@@ -63,31 +64,32 @@
 <!-- Experience Section -->
 <section class="container content-section" id="experience">
   <h2>Experience</h2>
+  <hr class="star-primary">
       <ul>
         
         <li>Intern at Sonru(2011)
-        <ul style="list-style-type:circle">
+        <ul style="list-style-type:circle" class="mobiletext">
           <li>Primary responsibilities included testing of interview software, Ruby on Rails development and office administration.</li></ul></li>
         </br>
 
         <li>Software Engineer at Errigal (2014-2015)
-        <ul style="list-style-type:circle">
+        <ul style="list-style-type:circle" class="mobiletext">
           <li>Key member of development team working in a variety of roles, including SCRUM sprint development for Groovy on Grails applications, MySQL report generation for IDMS application, customer support, deployment of applications in Linux environments, travelling abroad for training purposes, ATP testing of software and problem solving and analysis of IDMS issues.</li></ul></li>
         </br>
         
         <li>Guidewire (2016 to present)
-        <ul style="list-style-type:circle">
+        <ul style="list-style-type:circle" class="mobiletext">
           <li>GSC Consultant 1 at Guidewire Software. Position includes Java/Gosu-based Agile development and integration for Guidewire insurance products and manual testing of features.</li></ul></li>
       </ul>
 </section>
 
 
 <!-- About Section -->
-<section class="container content-section" id="about">
+<section class="container content-section mobiletext" id="about">
         <div class="row">
             <div class="col-lg-12">
                 <h2>About</h2>
-                <hr class="star-light">
+                <hr class="star-primary">
             </div>
         </div>
         <div class="row">
