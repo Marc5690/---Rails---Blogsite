@@ -12,7 +12,7 @@ gem 'pg'
 gem 'i18n'
 gem 'ransack'
 #gem 'devise'
-
+gem 'puma'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -43,13 +43,13 @@ group :development do
 
 end
 
-platforms :ruby do # linux
-  gem 'unicorn'
-end
+#platforms :ruby do # linux
+#  gem 'unicorn'
+#end
 
-platforms :mswin do # Windows
-  gem 'puma', '~> 3.0'
-end
+#platforms :mswin do # Windows
+#  gem 'puma', '~> 3.0'
+#end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
