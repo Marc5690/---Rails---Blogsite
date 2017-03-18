@@ -8,10 +8,10 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
-  password: password 
-  user: postgres 
-  #password: <%=ENV['BLOGSITE_DATABASE_PASSWORD']%> 
-  #user: <%=ENV['BLOGSITE_DATABASE_USER'] %> 
+  #password: password 
+  #user: postgres 
+  password: <%=ENV['BLOGSITE_DATABASE_PASSWORD']%> 
+  user: <%=ENV['BLOGSITE_DATABASE_USER'] %> 
 
 development:
   <<: *default
