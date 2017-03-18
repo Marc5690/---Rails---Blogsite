@@ -1,5 +1,6 @@
 # Change to match your CPU core count
-workers 2
+#workers 2
+workers 2 unless Gem.win_platform?
 
 # Min and Max threads per worker
 threads 1, 6

@@ -30,14 +30,17 @@
             </div>
         </div>
         <div class="row">
+        <div class="col-sm-8 portfolio-item mobiletext">
                 <% @posts.each do |post| %>
-                <div class="col-sm-4 portfolio-item mobiletext">
+                
                 <%= link_to post_path(post) do %>
                   <%#= image_tag post.image, class: 'img-responsive' %>
                   <%= post.Title + " " + post.daterelease.to_s%>
+                  <hr class="star-primary">
+                <% end %>
                 <% end %>
                 </div>
-            <% end %>
+            
         </div>
 </section>
 

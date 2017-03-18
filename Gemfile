@@ -11,8 +11,7 @@ gem 'pg'
 #gem 'sqlite3'
 gem 'i18n'
 gem 'ransack'
-#gem 'devise'
-gem 'puma'
+
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -34,14 +33,19 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'capistrano',         require: false
-  gem 'capistrano-rvm',     require: false
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
+  #gem 'web-console', '>= 3.3.0'
+  #gem 'capistrano',         require: false
+  #gem 'capistrano-rvm',     require: false
+  #gem 'capistrano-rails',   require: false
+  #gem 'capistrano-bundler', require: false
+  #gem 'capistrano3-puma',   require: false
 
 end
+
+group :production do
+  gem 'puma'
+end
+
 
 #platforms :ruby do # linux
 #  gem 'unicorn'

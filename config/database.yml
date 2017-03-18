@@ -6,11 +6,12 @@
 #
 default: &default
   adapter: postgresql
-  #adapter: sqlite3
   pool: 5
   timeout: 5000
-  password: 
-  user: rails
+  #password: password 
+  #user: postgres 
+  password: <%=ENV['BLOGSITE_DATABASE_PASSWORD']%> 
+  user: <%=ENV['BLOGSITE_DATABASE_USER'] %> 
 
 development:
   <<: *default
@@ -27,5 +28,9 @@ test:
 
 production:
   <<: *default
-  database: my_database_production
-  #database: db/production.sqlite3
+  ost: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: blogsite_production
+  pool: 5
+  username: <%= ENV['BLOGSITE_DATABASE_USER'] %>
