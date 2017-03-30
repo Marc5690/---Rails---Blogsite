@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.where('daterelease < ?', Date.today).order('created_at DESC')
+    @posts = Post.where('daterelease < ?', Date.today).order('daterelease DESC')
     #@posts = Post.all.order('created_at DESC')
   end
 
