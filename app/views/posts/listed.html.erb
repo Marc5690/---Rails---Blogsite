@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Marc Laffan</title>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag Ckeditor.cdn_url%>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+  </head>
+
+  <body>
+
+  <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+          <a href="/" onClick="javascript:document.location.reload(true)"><h3>Home</h3></a>
+
+</div>
+</div>
+</div>
+
+
+    <%= render "shared/alerts" %>
+<!-- Page Content -->
+<div class="container post-container">
+
+    <!-- Portfolio Item Heading -->
+   <div class="col-sm-8 portfolio-item mobiletext">
+                <% @posts.each do |post| %>
+                
+                <%= link_to post_path(post) do %>
+                  <%#= image_tag post.image, class: 'img-responsive' %>
+                  <%= post.Title + " " + post.daterelease.to_s%>
+                  <hr class="star-primary">
+                <% end %>
+                <% end %>
+                </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+
+    </div>
+    <!-- /.row -->
+
+    <!-- Related Projects Row -->
+
+    <!-- /.row -->
+</div>
+
+
+    <%#= render "shared/footer" %>
+  </body>
+</html>
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+
+
+
+
+
+
+
+
+     

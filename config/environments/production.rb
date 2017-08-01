@@ -74,10 +74,13 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-    config.assets.compile = true
-    config.assets.precompile += Ckeditor.assets
-config.assets.precompile += %w( ckeditor/* )
-config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+  config.assets.compile = true
+  config.assets.precompile += Ckeditor.assets
+  config.assets.precompile += %w( ckeditor/* )
+  config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
+  Paperclip.options[:command_path] = '/usr/bin'
+  Paperclip.options[:swallow_stderr] = false
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
