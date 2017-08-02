@@ -27,7 +27,7 @@ end
 
   show do
     attributes_table :text
-    active_admin_comments # Add this line for comment block
+#    active_admin_comments # Add this line for comment block
   end 
 
 end
