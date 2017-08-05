@@ -1,11 +1,19 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  def listed
+    @oldPosts = Post.where('daterelease <= ? AND category = ?', Date.today, '1').order('daterelease DESC')
+    @techPosts = Post.where('daterelease <= ? AND category = ?', Date.today, '2').order('daterelease DESC')
+    @nonsoftPosts = Post.where('daterelease <= ? AND category = ?', Date.today, '3').order('daterelease DESC')
+    @tutorialPosts = Post.where('daterelease <= ? AND category = ?', Date.today, '4').order('daterelease DESC')
+    #@posts = Post.where('daterelease < ?', Date.today).order('daterelease DESC')
+    render layout: false
+  end
+
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.where('daterelease < ?', Date.today).order('daterelease DESC')
-    #@posts = Post.all.order('created_at DESC')
+
   end
 
   # GET /posts/1
