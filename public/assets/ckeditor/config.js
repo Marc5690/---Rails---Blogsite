@@ -3,6 +3,7 @@ Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
+
 CKEDITOR.editorConfig = function( config )
 {
   // Define changes to default configuration here. For example:
@@ -34,7 +35,7 @@ CKEDITOR.editorConfig = function( config )
   config.allowedContent = true;
 
   // Toolbar groups configuration.
-  /*config.toolbar = [
+  config.toolbar = [
     { name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source'] },
     { name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
     // { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
@@ -54,5 +55,5 @@ CKEDITOR.editorConfig = function( config )
     { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
     { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
     { name: 'insert', items: [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar' ] }
-  ];*/
+  ];
 };
