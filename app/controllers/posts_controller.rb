@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.where('daterelease <= ?', Date.today).order('daterelease DESC')
-    @tutorials =  Post.where('daterelease <= ? AND category = ?', Date.today, '1').order('daterelease DESC')
+    @tutorials =  Post.where('daterelease <= ? AND category = ?', Date.today, '4').order('daterelease DESC')
   end
 
   def filteredlist
