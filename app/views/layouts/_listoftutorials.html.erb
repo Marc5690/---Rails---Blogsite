@@ -1,0 +1,17 @@
+<div class="center">
+  <table style="width:100%" cellpadding="10">
+    <tr>
+    <th><h3>Date</h3></th>
+    <th><h3>Title</h3></th>
+    <th><h4><button onClick="changePostsVisibility()" , >All Posts</button></h4></th>
+  </tr>
+    <div class="col-sm-8 portfolio-item">
+    <% @tutorials&.each do |tutorial| %>
+      <tr>
+      <td><%= tutorial.daterelease.strftime("%Y/%m")%></td>  
+      <td><%= link_to tutorial.Title, tutorial%></td>  
+        </tr>
+    <% end %>
+  </div>
+  </table>
+</div>

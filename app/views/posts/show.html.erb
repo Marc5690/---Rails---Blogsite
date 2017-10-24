@@ -2,82 +2,25 @@
 <html>
   <head>
     <title>Marc Laffan | Software Developer</title>
-    <%= csrf_meta_tags %>
     <%= javascript_include_tag Ckeditor.cdn_url%>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
   </head>
 
   <body>
 
-  <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-          <a href="/" onClick="javascript:document.location.reload(true)"><h3>Home</h3></a>
-          <a href="/blogposts" onClick="javascript:document.location.reload(true)"><h3>Blog Posts</h3></a>
-
-</div>
-</div>
-</div>
-
-
-    <%= render "shared/alerts" %>
-<!-- Page Content -->
-<div class="container post-container">
-
-    <!-- Portfolio Item Heading -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">
-              <small><%= @post.Title %></small>
-            </h1>
-            <small><%= @post.daterelease %></small>
-        </div>
+    <div class="center">
+      <h2><a href="/">Home</a></h2>
+      </br>
     </div>
-    <!-- /.row -->
+    </br>
 
-    <!-- Portfolio Item Row -->
-    <div class="row">
-
-
-        <div class="col-md-12 mobiletext">
-
-          <%=  (@post.text).html_safe.to_s %>
-
-</div>
+    <div class="centerbig">
+      <h3><%= @post.daterelease.strftime("%Y/%m") %> - <%= @post.Title %></h3>
+      <%=  (@post.text).html_safe.to_s %>
     </div>
-    <!-- /.row -->
-
-    <!-- Related Projects Row -->
-    <div class="row">
-
-        <div class="col-lg-12">
-            <h3 class="page-header">Other Posts</h3>
-        </div>
-
-        <% @posts.each do |post| %>
-            <div class="col-sm-3 col-xs-6">
-                <%= link_to post_path(post) do %>
-                  <%#= image_tag post.image, class: 'img-responsive portfolio-item' %>
-                  <%= post.Title%>
-                <% end %>
-            </div>
-        <% end %>
-
-    </div>
-    <!-- /.row -->
-</div>
-
-
     <%= render "shared/footer" %>
   </body>
 </html>
 
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
 

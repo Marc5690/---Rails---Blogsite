@@ -12,21 +12,29 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
-  def index
 
+  def index
+    @posts = Post.where('daterelease <= ?', Date.today).order('daterelease DESC')
+    @tutorials =  Post.where('daterelease <= ? AND category = ?', Date.today, '1').order('daterelease DESC')
+  end
+
+  def filteredlist
+    puts "Working here buddy"
+    redirect_to action: "index"
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
 
-    @post = Post.find(params[:id])
-    if @post.daterelease <= Date.today
-      @posts = Post.where('daterelease < ?', Date.today).order('created_at DESC').limit(4).offset(1)
-      render :layout => false
-    else
+    @post = Post.find_by_id(params[:id]) rescue nil
+    if @post == nil
       @posts = []
       redirect_to action: "index"
+    else
+      @post.daterelease <= Date.today
+      @posts = Post.where('daterelease < ?', Date.today).order('created_at DESC').limit(4).offset(1)
+      render :layout => false      
     end
   end
 =begin

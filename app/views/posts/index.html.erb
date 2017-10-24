@@ -1,140 +1,23 @@
 <!-- Header -->
 <header>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-              <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                  <%= image_tag ('profile_update_bw.png'), class: 'img-responsive img-circle' %>
-                </div>
-                <div class="col-lg-4">
-                  <div class="intro-text mobiletext">
-                  
-                    <span class="skills"></br></br></br><b>Hi, I'm Marc and I develop software.</b></br></br>I create solutions to software problems as my profession and enjoy developing apps as a hobby. 
-                    I also enjoy weightlifting, going to the cinema and spend far too much time on the internet. This website was created as a place to track my work and served as an exercise in creativity. Feedback and ideas are encouraged and welcome. You can find my CV by <a href="MarcLaffan-CurriculumVitae.pdf">clicking here</a>.</span>
-                  
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
+  <div class="center">
+    <table>
+      <tr>
+        <td><div class="center"><%= image_tag ('ProfileAtlanta.png') %></div></td>
+        <td><div class="center">Howdy! I'm Marc, and welcome to my blog.</br></br>Please click on the tutorial button below to filter my blog posts for the tutorials I've made.</div></td>
+  	  </tr>
+    </table>
+  </div>
 </header>
 
-<!-- Education Section -->
-<section class="container content-section" id="education">
-  <h2>Education</h2>
-  <hr class="star-primary">
-      <ul class="mobiletext">
-        
-        <li>Waterford Institute of Technology: Software Systems development(Ord) <b>2.1</b>
-        <ul style="list-style-type:circle">
-          <li>From 2009 to 2012 I attended the Waterford Institute of Technology course "Software Systems Development".</li></ul></li>
-        </br>
-        <li>Waterford Institute of Technology: Software Systems development(Hons) <b>2.1</b>
-        <ul style="list-style-type:circle">
-          <li>From 2012 to 2013 I attended the Waterford Institute of Technology course "Software Systems Development".</li></ul></li>
-        </br>
-        <li>University College Dublin: MSc in Computer Science(Negotiated Learning) <b>1.1</b>
-        <ul style="list-style-type:circle">
-          <li>From 2015 to 2016 I attended the University College Dublin course "MSc in Computer Science (Negotiated Learning)". The title "Negotiated Learning" refers to how this degree allows students to pick from roughly 100 modules related to computer science, a list of which can be found <a href="https://www.cs.ucd.ie/NLModules/">here</a>. My thesis project consisted of team project where I was responsible for the creation of a recommender system for a twitter application. I received an A- for this work.</li></ul></li>
-      </ul>
-</section>
-
-<!-- Experience Section -->
-<section class="container content-section" id="experience">
-  <h2>Experience</h2>
-  <hr class="star-primary">
-      <ul class="mobiletext">
-        
-        <li>Intern at Sonru(October 2011 - December 2011)
-        <ul style="list-style-type:circle">
-          <li>Primary responsibilities included testing of interview software, Ruby on Rails 3 development and office administration. This internship provided me with experience that was invaluable while finishing my undergraduate degree at Waterford Institute of Technology.</li></ul></li>
-        </br>
-
-        <li>Software Engineer at Errigal (January 2014 - May 2015)
-        <ul style="list-style-type:circle">
-          <li>Key member of development team working in a variety of roles, including SCRUM sprint development for Groovy on Grails applications, MySQL report generation for IDMS application, customer support, deployment of applications in Linux environments, travelling abroad for training purposes, ATP testing of software and problem solving and analysis of IDMS issues. I primarily gained software deployment and development experience from this position, that I used to create this website and host it.</li></ul></li>
-        </br>
-        
-        <li>Consultant at Guidewire (August 2016 to present)
-        <ul style="list-style-type:circle">
-          <li>GSC Consultant 1 at Guidewire Software. Position includes Java/Gosu-based Agile development and integration for Guidewire insurance products and manual testing of features. I have developed solutions using recursion, annotations and have learned various development techniques so far during my time in this position.</li></ul></li>
-      </ul>
-</section>
-
-
-<!-- About Section -->
-<section class="container content-section mobiletext" id="about">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>About</h2>
-                <hr class="star-primary">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                I've worked with many programming languages over the course of almost a decade now. My go-to language of choice is Java, which I am continuously working on my skills in. When developing web applications, I tend to rely on my skills in Ruby on Rails. I also work a lot with Android in my spare time, largely because I enjoy being the end-user reach that the Android platform provides. I have worked with Grails, PHP, JavaScript, Gosu, Python and a myriad of technologies.
-            </div>
-            <div class="col-lg-4">
-                On the non-technical side of things, I enjoy keeping fit and listening to podcasts. I play videogames (Currently Street Fighter 5. I am a master Zangief player and rightfully feared in the office) and absolutely adore any kind of zombie-related media. Videogames, TV shows, books, assorted junk, it does not matter! If it includes zombies I'm all over it like peanut on butter. I also collect, assemble and paint Warhammer models when the mood takes me. Don't act surprised, you know the programmer demograph...
-            </div>
-               <div class="col-lg-4">
-                Other than that, I haven't much left to say about myself. If you'd like to get in contact, my email can be found below by clicking on "contact me" (marclaffan@gmail.com). My github can also be found below, as can my LinkedIn profile and Play Store account. I currently have an ongoing project on the Play Store (You've guessed it - Zombies) that I'll be adding more to once this website goes live. If you have any feedback for it, please leave me a review. I'd appreciate it :)
-            </div>
-        </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="container content-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-              <div class="row">
-
-                <div class="col-lg-4 col-lg-offset-2">
-                  <h2><%= mail_to "marclaffan@gmail.com", "Contact Me", subject: "Howdy Marc! I'm your biggest fan!" %></h2><br>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2">
-                  <h2><a href="https://github.com/Marc5690">Github</a></h2><br>
-                </div>
-                
-                <div class="col-lg-4 col-lg-offset-2">
-                  <h2><a href="https://www.linkedin.com/in/marc-laffan-4134783a">LinkedIn</a></h2><br>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2">
-                  <h2><a href="https://play.google.com/store/apps/developer?id=Marc+Laffan">Play Store</a></h2><br>
-                </div>
-
-                <div class="col-lg-4 col-lg-offset-2">
-                  <h2><a href="https://twitter.com/MarcLaffan">Twitter</a></h2><br>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2">
-                  <h2><a href="MarcLaffan-CurriculumVitae.pdf">Curriculum Vitae</a></h2><br>
-                </div>
-              
-              </div>
-            </div>
-        </div>
-</section>
-
-
-
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-    <a class="btn btn-primary" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-    </a>
+    <div id="box">
+    <div id = 'allPosts'>
+    
+<%= render 'layouts/listofposts' %>
+	
 </div>
+ <div id = 'allTutorials' style="display:none">
 
-      <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+<%= render 'layouts/listoftutorials' %>
+ </div>
+ </div>
