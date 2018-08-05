@@ -1,10 +1,47 @@
 <!-- Header -->
 <header>
   <div class="center">
+
+  <% flash.each do |key, value| %>
+<div class = "alert">
+
+<%if key == "success"%>
+
+<div class = "alertSucceeded">
+<%= value %>
+</div>
+
+<%else%>
+
+<div class = "alertFailed">
+<%= value %>
+</div>
+
+<%end%>
+</div>
+<%end%>
+
+
     <table>
       <tr>
         <td><div class="center"><%= image_tag ('ProfileAtlanta.png') %></div></td>
-        <td><div class="center">Howdy! I'm Marc, and welcome to my blog.</br></br>Please click on the tutorial button below to filter my blog posts for the tutorials I've made.</div></td>
+        <td><div class="center">Howdy! I'm Marc, and welcome to my blog.<br><br>Please click on the tutorial button below to filter my blog posts for the tutorials I've made.<br><br>
+        <%= form_tag("/newemail",method:":post", :id => 'email_form',namespace: 'email_form', :html=> {:id => 'email_form'}) do %>
+        Please enter your
+        <%= text_field_tag :email, params[:email], :placeholder => "email here"%>
+        and your <%= text_field_tag :name, params[:name], :placeholder => "name here"%>
+        then click <%= link_to 'right here', "#", :onclick => "$('#email_form').submit()"%> if you want to hear more from me.
+
+        <%# submit_tag("this button",:class => "btn-default", data: { disable_with: "saving......" }  )%> 
+        
+        <%#newemail_path(email: params[:email], name: params[:name])%>
+
+
+        <%#= link_to 'submit', :onclick => "javascript:document.getElementById(\"email_form\").submit()" %>
+<%end%> 
+
+
+</div></td>
   	  </tr>
     </table>
   </div>

@@ -16,7 +16,7 @@
     </br>
 
     <div class="centerbig">
-      <h3><%= @post.daterelease.strftime("%Y/%m") %> - <%= @post.Title %></h3>
+      <h3><%= @post.daterelease.strftime("%Y/%m") %> - <%= @post.title %></h3>
       <%=  (@post.text).html_safe.to_s %>
     </div>
     <%= render "shared/footer" %>

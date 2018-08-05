@@ -13,11 +13,14 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
-permit_params :Title, :text, :daterelease, :category
+permit_params :title, :text, :daterelease, :category
+
+csv_importable :columns => [:text, :daterelease, :category, :title],
+                              :import_unique_key => :title
 
 form do |f|
   f.inputs do
-    f.input :Title
+    f.input :title
     f.input :daterelease
     f.input :category
     f.input :text, :as => :ckeditor

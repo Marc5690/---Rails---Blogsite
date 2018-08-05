@@ -6,29 +6,31 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'rails', '~> 5.0.1'
-gem 'pg'
+gem 'rails', '5.0.1'
+gem 'pg', '0.19.0'
 #gem 'sqlite3'
-gem 'i18n'
-gem 'ransack'
+gem 'i18n', '0.8.1'
+gem 'ransack', '1.8.2'
 
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'sass-rails', '5.0.6'
+gem 'uglifier', '3.0.4'
+gem 'coffee-rails', '4.2.1'
 
-gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
-gem 'devise', '~> 4.2'
-gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
-gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
-gem 'active_skin'
-gem 'paperclip'
-gem 'ckeditor', '~> 4.2.4'
+gem 'jquery-rails', '4.2.2'
+gem 'turbolinks', '5.0.1'
+gem 'jbuilder', '2.6.1'
+gem 'devise', '4.2.0'
+gem 'activeadmin', '1.0.0'#git: 'https://github.com/activeadmin/activeadmin'
+gem 'inherited_resources', '1.7.0'#git: 'https://github.com/activeadmin/inherited_resources'
+gem 'active_skin', '0.0.12'
+gem 'paperclip', '5.1.0'
+gem 'ckeditor', '4.2.4'
+gem 'active_admin_csv_import'
+#gem 'bcrypt', '~> 3.1.11', platforms: [:ruby]#, :x64_mingw, :mingw]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug', '9.0.6'#platform: :mri
 end
 
 group :development do
@@ -43,7 +45,7 @@ group :development do
 end
 
 group :production do
-  gem 'puma'
+  gem 'puma', '3.7.1'
 end
 
 
